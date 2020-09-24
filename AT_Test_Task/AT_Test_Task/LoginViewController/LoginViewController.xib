@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="AT_Test_Task" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicatorView" destination="SXS-rh-zH4" id="ILv-R0-Qia"/>
+                <outlet property="centerYAnchor" destination="XK8-0R-arM" id="p2X-6l-PQP"/>
                 <outlet property="loginButton" destination="c2R-5I-y2Y" id="bCC-Gv-JrT"/>
                 <outlet property="passwordTextField" destination="jSw-jb-iAk" id="edl-s3-Uh3"/>
                 <outlet property="usernameTextField" destination="6P4-xm-rMr" id="NQm-Mo-rR2"/>
