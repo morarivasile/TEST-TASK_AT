@@ -28,7 +28,7 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Authorization"
+        title = "Авторизация"
     }
     
     // MARK: - IBActions
