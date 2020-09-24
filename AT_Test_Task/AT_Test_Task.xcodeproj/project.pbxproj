@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3283974251C96ED00C92BC3 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3283973251C96ED00C92BC3 /* LoginPresenter.swift */; };
+		C3283977251C98A800C92BC3 /* RegexValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3283976251C98A800C92BC3 /* RegexValidator.swift */; };
+		C328397A251CA4C700C92BC3 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3283979251CA4C700C92BC3 /* LoginInteractor.swift */; };
+		C328397E251CA9CA00C92BC3 /* LoginModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328397D251CA9CA00C92BC3 /* LoginModuleProtocols.swift */; };
 		C37981C1251C89A1006312D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37981C0251C89A1006312D9 /* AppDelegate.swift */; };
 		C37981CA251C89A3006312D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37981C9251C89A3006312D9 /* Assets.xcassets */; };
 		C37981CD251C89A3006312D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37981CB251C89A3006312D9 /* LaunchScreen.storyboard */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C3283973251C96ED00C92BC3 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		C3283976251C98A800C92BC3 /* RegexValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexValidator.swift; sourceTree = "<group>"; };
+		C3283979251CA4C700C92BC3 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		C328397D251CA9CA00C92BC3 /* LoginModuleProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleProtocols.swift; sourceTree = "<group>"; };
 		C37981BD251C89A1006312D9 /* AT_Test_Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AT_Test_Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37981C0251C89A1006312D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C37981C9251C89A3006312D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C3283980251CAA4A00C92BC3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C3283976251C98A800C92BC3 /* RegexValidator.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		C37981B4251C89A1006312D9 = {
 			isa = PBXGroup;
 			children = (
@@ -60,8 +76,9 @@
 		C37981BF251C89A1006312D9 /* AT_Test_Task */ = {
 			isa = PBXGroup;
 			children = (
-				C37981E3251C8CDF006312D9 /* Coordinators */,
+				C3283980251CAA4A00C92BC3 /* Utils */,
 				C37981DC251C8BC0006312D9 /* Protocols */,
+				C37981E3251C8CDF006312D9 /* Coordinators */,
 				C37981D5251C8B96006312D9 /* LoginViewController */,
 				C37981C0251C89A1006312D9 /* AppDelegate.swift */,
 				C37981C9251C89A3006312D9 /* Assets.xcassets */,
@@ -76,6 +93,9 @@
 			children = (
 				C37981D6251C8BAB006312D9 /* LoginViewController.xib */,
 				C37981D9251C8BB6006312D9 /* LoginViewController.swift */,
+				C3283979251CA4C700C92BC3 /* LoginInteractor.swift */,
+				C3283973251C96ED00C92BC3 /* LoginPresenter.swift */,
+				C328397D251CA9CA00C92BC3 /* LoginModuleProtocols.swift */,
 			);
 			path = LoginViewController;
 			sourceTree = "<group>";
@@ -167,9 +187,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3283974251C96ED00C92BC3 /* LoginPresenter.swift in Sources */,
 				C37981DA251C8BB6006312D9 /* LoginViewController.swift in Sources */,
 				C37981E9251C8CFC006312D9 /* MainCoordinator.swift in Sources */,
 				C37981E5251C8CE7006312D9 /* Coordinator.swift in Sources */,
+				C328397E251CA9CA00C92BC3 /* LoginModuleProtocols.swift in Sources */,
+				C328397A251CA4C700C92BC3 /* LoginInteractor.swift in Sources */,
+				C3283977251C98A800C92BC3 /* RegexValidator.swift in Sources */,
 				C37981C1251C89A1006312D9 /* AppDelegate.swift in Sources */,
 				C37981E0251C8C4B006312D9 /* UIViewController+NibLoaded.swift in Sources */,
 			);

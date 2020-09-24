@@ -18,9 +18,15 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        let viewController = LoginViewController.nibLoaded
+        let view = LoginViewController.nibLoaded
+        let interactor = LoginInteractor()
+        let presenter = LoginPresenter()
         
-        navigationController.pushViewController(viewController, animated: true)
+        view.interactor = interactor
+        interactor.presenter = presenter
+        presenter.view = view
+        
+        navigationController.pushViewController(view, animated: true)
     }
 }
 
