@@ -11,8 +11,8 @@ final class LoginViewController: UIViewController {
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak private var emailTextField: UITextField! {
-        didSet { emailTextField.delegate = self }
+    @IBOutlet weak private var usernameTextField: UITextField! {
+        didSet { usernameTextField.delegate = self }
     }
     
     @IBOutlet weak private var passwordTextField: UITextField! {
@@ -54,8 +54,8 @@ extension LoginViewController: UITextFieldDelegate {
         let previousText = NSString(string: textField.text ?? "")
         let updatedText = previousText.replacingCharacters(in: range, with: string)
         
-        if textField == emailTextField {
-            interactor.didChangeEmailField(updatedText)
+        if textField == usernameTextField {
+            interactor.didChangeUsernameField(updatedText)
         } else if textField == passwordTextField {
             interactor.didChangePasswordField(updatedText)
         }

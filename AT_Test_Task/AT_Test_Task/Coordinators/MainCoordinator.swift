@@ -19,7 +19,9 @@ class MainCoordinator: Coordinator {
     
     func start() {
         let view = LoginViewController.nibLoaded
-        let interactor = LoginInteractor()
+        let client = AltarStudiosClient(configuration: .default)
+        let validator = LoginCredentialsValidator()
+        let interactor = LoginInteractor(client: client, validator: validator)
         let presenter = LoginPresenter()
         
         view.interactor = interactor

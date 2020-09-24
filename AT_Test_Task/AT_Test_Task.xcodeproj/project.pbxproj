@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		C3283974251C96ED00C92BC3 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3283973251C96ED00C92BC3 /* LoginPresenter.swift */; };
-		C3283977251C98A800C92BC3 /* RegexValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3283976251C98A800C92BC3 /* RegexValidator.swift */; };
 		C328397A251CA4C700C92BC3 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3283979251CA4C700C92BC3 /* LoginInteractor.swift */; };
 		C328397E251CA9CA00C92BC3 /* LoginModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328397D251CA9CA00C92BC3 /* LoginModuleProtocols.swift */; };
+		C3283984251CB94000C92BC3 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3283983251CB94000C92BC3 /* APIClient.swift */; };
+		C328398A251CC6C800C92BC3 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3283989251CC6C800C92BC3 /* APIError.swift */; };
+		C328398D251CC6E600C92BC3 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328398C251CC6E600C92BC3 /* Endpoint.swift */; };
+		C3283990251CC6F200C92BC3 /* AltarStudiosClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328398F251CC6F200C92BC3 /* AltarStudiosClient.swift */; };
+		C3283993251CC70600C92BC3 /* AltarStudiosEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3283992251CC70600C92BC3 /* AltarStudiosEndpoint.swift */; };
+		C3283997251CC74F00C92BC3 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3283996251CC74F00C92BC3 /* AuthResponse.swift */; };
+		C328399C251CCB2E00C92BC3 /* CredentialsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328399B251CCB2E00C92BC3 /* CredentialsValidator.swift */; };
+		C328399F251CCB3C00C92BC3 /* LoginCredentialsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328399E251CCB3C00C92BC3 /* LoginCredentialsValidator.swift */; };
 		C37981C1251C89A1006312D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37981C0251C89A1006312D9 /* AppDelegate.swift */; };
 		C37981CA251C89A3006312D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37981C9251C89A3006312D9 /* Assets.xcassets */; };
 		C37981CD251C89A3006312D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37981CB251C89A3006312D9 /* LaunchScreen.storyboard */; };
@@ -23,9 +30,16 @@
 
 /* Begin PBXFileReference section */
 		C3283973251C96ED00C92BC3 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
-		C3283976251C98A800C92BC3 /* RegexValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexValidator.swift; sourceTree = "<group>"; };
 		C3283979251CA4C700C92BC3 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		C328397D251CA9CA00C92BC3 /* LoginModuleProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleProtocols.swift; sourceTree = "<group>"; };
+		C3283983251CB94000C92BC3 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		C3283989251CC6C800C92BC3 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		C328398C251CC6E600C92BC3 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		C328398F251CC6F200C92BC3 /* AltarStudiosClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltarStudiosClient.swift; sourceTree = "<group>"; };
+		C3283992251CC70600C92BC3 /* AltarStudiosEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltarStudiosEndpoint.swift; sourceTree = "<group>"; };
+		C3283996251CC74F00C92BC3 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		C328399B251CCB2E00C92BC3 /* CredentialsValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsValidator.swift; sourceTree = "<group>"; };
+		C328399E251CCB3C00C92BC3 /* LoginCredentialsValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentialsValidator.swift; sourceTree = "<group>"; };
 		C37981BD251C89A1006312D9 /* AT_Test_Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AT_Test_Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37981C0251C89A1006312D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C37981C9251C89A3006312D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,12 +63,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C3283980251CAA4A00C92BC3 /* Utils */ = {
+		C3283982251CB91B00C92BC3 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				C3283976251C98A800C92BC3 /* RegexValidator.swift */,
+				C3283995251CC74400C92BC3 /* Responses */,
+				C3283992251CC70600C92BC3 /* AltarStudiosEndpoint.swift */,
+				C328398F251CC6F200C92BC3 /* AltarStudiosClient.swift */,
+				C3283983251CB94000C92BC3 /* APIClient.swift */,
+				C328398C251CC6E600C92BC3 /* Endpoint.swift */,
+				C3283989251CC6C800C92BC3 /* APIError.swift */,
 			);
-			path = Utils;
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C3283995251CC74400C92BC3 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				C3283996251CC74F00C92BC3 /* AuthResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		C328399A251CCB2200C92BC3 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				C328399B251CCB2E00C92BC3 /* CredentialsValidator.swift */,
+				C328399E251CCB3C00C92BC3 /* LoginCredentialsValidator.swift */,
+			);
+			path = Validator;
 			sourceTree = "<group>";
 		};
 		C37981B4251C89A1006312D9 = {
@@ -76,7 +112,7 @@
 		C37981BF251C89A1006312D9 /* AT_Test_Task */ = {
 			isa = PBXGroup;
 			children = (
-				C3283980251CAA4A00C92BC3 /* Utils */,
+				C3283982251CB91B00C92BC3 /* Networking */,
 				C37981DC251C8BC0006312D9 /* Protocols */,
 				C37981E3251C8CDF006312D9 /* Coordinators */,
 				C37981D5251C8B96006312D9 /* LoginViewController */,
@@ -91,6 +127,7 @@
 		C37981D5251C8B96006312D9 /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C328399A251CCB2200C92BC3 /* Validator */,
 				C37981D6251C8BAB006312D9 /* LoginViewController.xib */,
 				C37981D9251C8BB6006312D9 /* LoginViewController.swift */,
 				C3283979251CA4C700C92BC3 /* LoginInteractor.swift */,
@@ -190,12 +227,19 @@
 				C3283974251C96ED00C92BC3 /* LoginPresenter.swift in Sources */,
 				C37981DA251C8BB6006312D9 /* LoginViewController.swift in Sources */,
 				C37981E9251C8CFC006312D9 /* MainCoordinator.swift in Sources */,
+				C3283984251CB94000C92BC3 /* APIClient.swift in Sources */,
+				C3283990251CC6F200C92BC3 /* AltarStudiosClient.swift in Sources */,
 				C37981E5251C8CE7006312D9 /* Coordinator.swift in Sources */,
 				C328397E251CA9CA00C92BC3 /* LoginModuleProtocols.swift in Sources */,
 				C328397A251CA4C700C92BC3 /* LoginInteractor.swift in Sources */,
-				C3283977251C98A800C92BC3 /* RegexValidator.swift in Sources */,
+				C328399F251CCB3C00C92BC3 /* LoginCredentialsValidator.swift in Sources */,
+				C328399C251CCB2E00C92BC3 /* CredentialsValidator.swift in Sources */,
+				C3283993251CC70600C92BC3 /* AltarStudiosEndpoint.swift in Sources */,
 				C37981C1251C89A1006312D9 /* AppDelegate.swift in Sources */,
 				C37981E0251C8C4B006312D9 /* UIViewController+NibLoaded.swift in Sources */,
+				C328398D251CC6E600C92BC3 /* Endpoint.swift in Sources */,
+				C3283997251CC74F00C92BC3 /* AuthResponse.swift in Sources */,
+				C328398A251CC6C800C92BC3 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

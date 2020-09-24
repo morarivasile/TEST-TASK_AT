@@ -11,15 +11,19 @@ final class LoginInteractor {
     
     var presenter: LoginPresenterProtocol!
     
-    private var regexValidator = RegexValidator()
-    
     private var credentials = UserCredentials.empty
     
+    private let validator: CredentialsValidator
+    
+    private let client: AltarStudiosAuthorizable
+    
     private var areFieldsValid: Bool {
-        let isEmailValid = regexValidator.validate(credentials.email, type: .email)
-        let isPasswordValid = regexValidator.validate(credentials.password, type: .password)
-        
-        return isEmailValid && isPasswordValid
+        return validator.validateUsername(credentials.username) && validator.validatePassword(credentials.password)
+    }
+    
+    init(client: AltarStudiosClient, validator: CredentialsValidator) {
+        self.client = client
+        self.validator = validator
     }
     
 }
@@ -27,30 +31,33 @@ final class LoginInteractor {
 // MARK: - LoginInteractorProtocol
 
 extension LoginInteractor: LoginInteractorProtocol {
-    func didChangeEmailField(_ email: String) {
-        if credentials.email != email {
-            credentials.email = email
-            presenter.credentialsChanged(areFieldsValid)
-        }
+    func didChangeUsernameField(_ username: String) {
+        credentials.username = username
+        presenter.credentialsChanged(areFieldsValid)
     }
     
     func didChangePasswordField(_ password: String) {
-        if credentials.password != password {
-            credentials.password = password
-            presenter.credentialsChanged(areFieldsValid)
-        }
+        credentials.password = password
+        presenter.credentialsChanged(areFieldsValid)
     }
     
     func didTapLoginButton() {
-        print("Login")
+        client.authorize(username: credentials.username, password: credentials.password) { (result) in
+            switch result {
+            case .success(let response):
+                print(response)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 
 struct UserCredentials {
-    var email: String
+    var username: String
     var password: String
     
     static var empty: UserCredentials {
-        return UserCredentials(email: "", password: "")
+        return UserCredentials(username: "", password: "")
     }
 }

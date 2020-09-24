@@ -17,7 +17,7 @@ protocol LoginPresenterProtocol: class {
 }
 
 protocol LoginInteractorProtocol: class {
-    func didChangeEmailField(_ email: String)
+    func didChangeUsernameField(_ username: String)
     func didChangePasswordField(_ password: String)
     func didTapLoginButton()
 }
