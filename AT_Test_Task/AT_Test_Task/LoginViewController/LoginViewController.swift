@@ -73,10 +73,3 @@ extension LoginViewController: UITextFieldDelegate {
         return true
     }
 }
-
-enum LoginScreenState {
-    case valid
-    case invalid
-    case loading
-    case error
-}

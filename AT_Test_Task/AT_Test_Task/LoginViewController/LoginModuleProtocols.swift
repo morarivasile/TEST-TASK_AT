@@ -8,13 +8,15 @@
 import Foundation
 
 
-protocol LoginViewProtocol: class {
+protocol LoginViewProtocol: class, AlertPresentable {
     func updateLoginButton(isEnabled: Bool)
     func updateActivityIndicator(isSpining: Bool)
 }
 
 protocol LoginPresenterProtocol: class {
-    func didChangeState(_ state: LoginScreenState)
+    func fieldsDidChange(_ areFieldsValid: Bool)
+    func didStartLoadingRequest()
+    func didFinishRequest(result: Result<String, Error>)
 }
 
 protocol LoginInteractorProtocol: class {
