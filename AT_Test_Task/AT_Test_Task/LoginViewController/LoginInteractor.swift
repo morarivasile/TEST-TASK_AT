@@ -17,6 +17,12 @@ final class LoginInteractor {
     
     private let client: AltarStudiosAuthorizable
     
+    private var state: LoginScreenState = .invalid {
+        didSet {
+            if state != oldValue { presenter.didChangeState(state) }
+        }
+    }
+    
     private var areFieldsValid: Bool {
         return validator.validateUsername(credentials.username) && validator.validatePassword(credentials.password)
     }
@@ -33,20 +39,25 @@ final class LoginInteractor {
 extension LoginInteractor: LoginInteractorProtocol {
     func didChangeUsernameField(_ username: String) {
         credentials.username = username
-        presenter.credentialsChanged(areFieldsValid)
+        
+        state = areFieldsValid ? .valid : .invalid
     }
     
     func didChangePasswordField(_ password: String) {
         credentials.password = password
-        presenter.credentialsChanged(areFieldsValid)
+        
+        state = areFieldsValid ? .valid : .invalid
     }
     
     func didTapLoginButton() {
+        state = .loading
         client.authorize(username: credentials.username, password: credentials.password) { (result) in
             switch result {
             case .success(let response):
+                self.state = response.status == "ok" ? .valid : .error
                 print(response)
             case .failure(let error):
+                self.state = .error
                 print(error)
             }
         }

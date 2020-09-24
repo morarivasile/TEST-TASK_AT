@@ -42,17 +42,18 @@ extension APIClient {
     
     func fetch<T: Decodable>(with request: URLRequest, completion: @escaping (Result<T, APIError>) -> Void) {
         let task = decodingTask(with: request, decodingType: T.self) { (decodedObject , error) in
-            
-            guard let object = decodedObject as? T else {
-                if let error = error {
-                    completion(.failure(error))
-                } else {
-                    completion(.failure(.invalidData))
+            DispatchQueue.main.async {
+                guard let object = decodedObject as? T else {
+                    if let error = error {
+                        completion(.failure(error))
+                    } else {
+                        completion(.failure(.invalidData))
+                    }
+                    return
                 }
-                return
+                
+                completion(.success(object))
             }
-            
-            completion(.success(object))
         }
         task.resume()
     }

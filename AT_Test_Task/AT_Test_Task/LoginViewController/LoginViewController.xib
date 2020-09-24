@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="AT_Test_Task" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicatorView" destination="SXS-rh-zH4" id="ILv-R0-Qia"/>
                 <outlet property="loginButton" destination="c2R-5I-y2Y" id="bCC-Gv-JrT"/>
                 <outlet property="passwordTextField" destination="jSw-jb-iAk" id="edl-s3-Uh3"/>
                 <outlet property="usernameTextField" destination="6P4-xm-rMr" id="NQm-Mo-rR2"/>
@@ -55,14 +56,19 @@
                         <action selector="didTapLoginButton:" destination="-1" eventType="touchUpInside" id="0uA-Me-z8D"/>
                     </connections>
                 </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="SXS-rh-zH4">
+                    <rect key="frame" x="197" y="303.5" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="SXS-rh-zH4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="54Y-Me-e6p"/>
                 <constraint firstItem="c2R-5I-y2Y" firstAttribute="top" secondItem="Gt4-Xk-NMh" secondAttribute="bottom" constant="24" id="CV6-5w-bbR"/>
                 <constraint firstItem="Gt4-Xk-NMh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="XK8-0R-arM"/>
                 <constraint firstItem="Gt4-Xk-NMh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="ZdO-vU-dFw"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Gt4-Xk-NMh" secondAttribute="trailing" constant="16" id="m9d-kY-vGr"/>
+                <constraint firstItem="SXS-rh-zH4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.7" id="nPU-cL-hbG"/>
                 <constraint firstItem="c2R-5I-y2Y" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yZJ-He-5qv"/>
             </constraints>
             <point key="canvasLocation" x="-145" y="153"/>

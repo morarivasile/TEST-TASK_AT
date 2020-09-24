@@ -11,6 +11,8 @@ final class LoginViewController: UIViewController {
     
     // MARK: - IBOutlets
     
+    @IBOutlet weak private var activityIndicatorView: UIActivityIndicatorView!
+    
     @IBOutlet weak private var usernameTextField: UITextField! {
         didSet { usernameTextField.delegate = self }
     }
@@ -45,6 +47,14 @@ extension LoginViewController: LoginViewProtocol {
     func updateLoginButton(isEnabled: Bool) {
         loginButton.isEnabled = isEnabled
     }
+    
+    func updateActivityIndicator(isSpining: Bool) {
+        if isSpining {
+            activityIndicatorView.startAnimating()
+        } else {
+            activityIndicatorView.stopAnimating()
+        }
+    }
 }
 
 // MARK: - UITextFieldDelegate
@@ -62,4 +72,11 @@ extension LoginViewController: UITextFieldDelegate {
         
         return true
     }
+}
+
+enum LoginScreenState {
+    case valid
+    case invalid
+    case loading
+    case error
 }

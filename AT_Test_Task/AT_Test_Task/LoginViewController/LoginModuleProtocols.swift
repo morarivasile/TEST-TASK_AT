@@ -10,10 +10,11 @@ import Foundation
 
 protocol LoginViewProtocol: class {
     func updateLoginButton(isEnabled: Bool)
+    func updateActivityIndicator(isSpining: Bool)
 }
 
 protocol LoginPresenterProtocol: class {
-    func credentialsChanged(_ isValid: Bool)
+    func didChangeState(_ state: LoginScreenState)
 }
 
 protocol LoginInteractorProtocol: class {

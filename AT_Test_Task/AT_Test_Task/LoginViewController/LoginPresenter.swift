@@ -17,7 +17,20 @@ final class LoginPresenter {
 // MARK: - LoginPresenterProtocol
 
 extension LoginPresenter: LoginPresenterProtocol {
-    func credentialsChanged(_ isValid: Bool) {
-        view?.updateLoginButton(isEnabled: isValid)
+    func didChangeState(_ state: LoginScreenState) {
+        print(state)
+        
+        switch state {
+        case .invalid:
+            view?.updateLoginButton(isEnabled: false)
+        case .valid:
+            view?.updateLoginButton(isEnabled: true)
+            view?.updateActivityIndicator(isSpining: false)
+        case .loading:
+            view?.updateLoginButton(isEnabled: false)
+            view?.updateActivityIndicator(isSpining: true)
+        case .error:
+            view?.updateActivityIndicator(isSpining: false)
+        }
     }
 }
