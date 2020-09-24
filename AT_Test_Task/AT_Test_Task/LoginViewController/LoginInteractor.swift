@@ -54,7 +54,11 @@ extension LoginInteractor: LoginInteractorProtocol {
         client.authorize(username: credentials.username, password: credentials.password) { (result) in
             switch result {
             case .success(let response):
-                self.state = response.status == "ok" ? .valid : .error
+                switch LoginResponseStatus(rawValue: response.status) {
+                case .ok: self.state = .valid
+                case .other: self.state = .error
+                }
+                
                 print(response)
             case .failure(let error):
                 self.state = .error
@@ -64,11 +68,3 @@ extension LoginInteractor: LoginInteractorProtocol {
     }
 }
 
-struct UserCredentials {
-    var username: String
-    var password: String
-    
-    static var empty: UserCredentials {
-        return UserCredentials(username: "", password: "")
-    }
-}

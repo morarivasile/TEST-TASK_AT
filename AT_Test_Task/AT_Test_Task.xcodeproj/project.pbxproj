@@ -18,6 +18,8 @@
 		C3283997251CC74F00C92BC3 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3283996251CC74F00C92BC3 /* AuthResponse.swift */; };
 		C328399C251CCB2E00C92BC3 /* CredentialsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328399B251CCB2E00C92BC3 /* CredentialsValidator.swift */; };
 		C328399F251CCB3C00C92BC3 /* LoginCredentialsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328399E251CCB3C00C92BC3 /* LoginCredentialsValidator.swift */; };
+		C32839A5251CD31600C92BC3 /* LoginResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32839A4251CD31600C92BC3 /* LoginResponseStatus.swift */; };
+		C32839A8251CD32700C92BC3 /* UserCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32839A7251CD32700C92BC3 /* UserCredentials.swift */; };
 		C37981C1251C89A1006312D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37981C0251C89A1006312D9 /* AppDelegate.swift */; };
 		C37981CA251C89A3006312D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C37981C9251C89A3006312D9 /* Assets.xcassets */; };
 		C37981CD251C89A3006312D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37981CB251C89A3006312D9 /* LaunchScreen.storyboard */; };
@@ -40,6 +42,8 @@
 		C3283996251CC74F00C92BC3 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		C328399B251CCB2E00C92BC3 /* CredentialsValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsValidator.swift; sourceTree = "<group>"; };
 		C328399E251CCB3C00C92BC3 /* LoginCredentialsValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentialsValidator.swift; sourceTree = "<group>"; };
+		C32839A4251CD31600C92BC3 /* LoginResponseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseStatus.swift; sourceTree = "<group>"; };
+		C32839A7251CD32700C92BC3 /* UserCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCredentials.swift; sourceTree = "<group>"; };
 		C37981BD251C89A1006312D9 /* AT_Test_Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AT_Test_Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37981C0251C89A1006312D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C37981C9251C89A3006312D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +97,15 @@
 			path = Validator;
 			sourceTree = "<group>";
 		};
+		C32839A3251CD30700C92BC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C32839A4251CD31600C92BC3 /* LoginResponseStatus.swift */,
+				C32839A7251CD32700C92BC3 /* UserCredentials.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C37981B4251C89A1006312D9 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +140,7 @@
 		C37981D5251C8B96006312D9 /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C32839A3251CD30700C92BC3 /* Model */,
 				C328399A251CCB2200C92BC3 /* Validator */,
 				C37981D6251C8BAB006312D9 /* LoginViewController.xib */,
 				C37981D9251C8BB6006312D9 /* LoginViewController.swift */,
@@ -229,6 +243,7 @@
 				C37981E9251C8CFC006312D9 /* MainCoordinator.swift in Sources */,
 				C3283984251CB94000C92BC3 /* APIClient.swift in Sources */,
 				C3283990251CC6F200C92BC3 /* AltarStudiosClient.swift in Sources */,
+				C32839A8251CD32700C92BC3 /* UserCredentials.swift in Sources */,
 				C37981E5251C8CE7006312D9 /* Coordinator.swift in Sources */,
 				C328397E251CA9CA00C92BC3 /* LoginModuleProtocols.swift in Sources */,
 				C328397A251CA4C700C92BC3 /* LoginInteractor.swift in Sources */,
@@ -238,6 +253,7 @@
 				C37981C1251C89A1006312D9 /* AppDelegate.swift in Sources */,
 				C37981E0251C8C4B006312D9 /* UIViewController+NibLoaded.swift in Sources */,
 				C328398D251CC6E600C92BC3 /* Endpoint.swift in Sources */,
+				C32839A5251CD31600C92BC3 /* LoginResponseStatus.swift in Sources */,
 				C3283997251CC74F00C92BC3 /* AuthResponse.swift in Sources */,
 				C328398A251CC6C800C92BC3 /* APIError.swift in Sources */,
 			);
