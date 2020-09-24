@@ -8,9 +8,7 @@
 import UIKit
 
 extension UIViewController {
-    
     class var nibLoaded: Self {
         return Self.init(nibName: String(describing: Self.self), bundle: nil)
     }
-       
 }
